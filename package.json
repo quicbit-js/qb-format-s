@@ -1,0 +1,21 @@
+{
+  "name": "qb-prints",
+  "version": "1.0.0",
+  "description": "A tiny implementation of printf spacing logic for strings",
+  "devDependencies": {
+    "tape": "^4.6.3",
+    "test-kit": "^1.1.4"
+  },
+  "scripts": {
+    "test": "tap --coverage-report=html test.js"
+  },
+  "keywords": [
+    "quicbit",
+    "sprintf",
+    "printf",
+    "small",
+    "tiny"
+  ],
+  "author": "Matthew Voss",
+  "license": "ISC"
+}
