@@ -1,5 +1,5 @@
 function err(msg) { throw Error(msg) }
-module.exports = function printf() {
+module.exports = function() {
     var re = /%([+-])?(\d+)?(?:\.(\d+))?s/g     // captures: left-justify, field-width, precision   (type 's' assumed)
     var a = arguments
 
