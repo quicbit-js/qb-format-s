@@ -1,7 +1,8 @@
 {
   "name": "qb-prints",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tiny implementation of printf spacing logic for strings",
+  "repository": "quicbit-js/qb-prints",
   "devDependencies": {
     "tape": "^4.6.3",
     "test-kit": "^1.1.4"
