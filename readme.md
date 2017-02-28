@@ -1,6 +1,6 @@
 # qb-prints
 
-A tiny implementation of printf's spacing logic for strings.  Only supports
+A tiny implementation of printf's spacing logic for strings (~500 added bytes to minified codebase).  Only supports
 %s, not numbers, floats, etc.
 
 ## install

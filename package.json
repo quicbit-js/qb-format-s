@@ -8,7 +8,8 @@
     "test-kit": "^1.1.4"
   },
   "scripts": {
-    "test": "tap --coverage-report=html test.js"
+    "test": "tap --coverage-report=html test.js",
+    "dist": "mkdir -p dist && browserify index.js > dist/qb-prints.js && cat dist/qb-prints.js | uglifyjs -c -m > dist/qb-prints.min.js"
   },
   "keywords": [
     "quicbit",
