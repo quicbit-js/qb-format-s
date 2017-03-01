@@ -1,19 +1,20 @@
 {
-  "name": "qb-prints",
-  "version": "1.0.2",
+  "name": "qb-format-s",
+  "version": "1.0.3",
   "description": "A tiny implementation of printf spacing logic for strings",
-  "repository": "quicbit-js/qb-prints",
+  "repository": "quicbit-js/qb-format-s",
   "devDependencies": {
     "tape": "^4.6.3",
     "test-kit": "^1.1.4"
   },
   "scripts": {
     "test": "tap --coverage-report=html test.js",
-    "dist": "mkdir -p dist && browserify index.js > dist/qb-prints.js && cat dist/qb-prints.js | uglifyjs -c -m > dist/qb-prints.min.js"
+    "dist": "mkdir -p dist && browserify index.js > dist/qb-format-s.js && cat dist/qb-format-s.js | uglifyjs -c -m > dist/qb-format-s.min.js"
   },
   "keywords": [
     "quicbit",
     "sprintf",
+    "format",
     "printf",
     "small",
     "tiny"

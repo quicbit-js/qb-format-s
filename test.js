@@ -1,7 +1,7 @@
 var test = require('test-kit').tape()
-var printf = require('.')
+var format = require('.')
 
-test('prints', function(t) {
+test('format-s', function(t) {
     t.tableAssert([
         [ 'args',                           'exp'               ],
         [ [],                               ''                  ],  // no args returns empty string
@@ -21,7 +21,7 @@ test('prints', function(t) {
         [ ['a%9sb', '12345678'],            'a 12345678b'       ],
         [ ['a%9.3sb', '12345678'],          'a      123b'       ],
 
-    ], function(args) { return printf.apply(null, args) } )
+    ], function(args) { return format.apply(null, args) } )
 })
 
 test('errors', function(t) {
@@ -32,7 +32,25 @@ test('errors', function(t) {
             [ ['hello',   'a'],             /too many arguments/ ],
             [ ['%s', 'a', 'b'],             /too many arguments/ ],
         ],
-        function(args) { return printf.apply(null, args) },
+        function(args) { return format.apply(null, args) },
         { assert: 'throws' }
+    )
+})
+
+test('format-logger', function(t) {
+    // test out the suggested logger function by returning the output instead of logging it via console.log
+    var logger = function() {
+        return format.apply( null, Array.prototype.slice.call(arguments).map(function(v) { return v + '' } ) )
+    }
+    t.tableAssert(
+        [
+            [ 'args',                           'exp'               ],
+            [ [''],                             ''                  ],
+            [ ['hello'],                        'hello'             ],
+            [ ['%-6s%8s', '123', '456'],        '123        456'    ],
+            [ ['%-6s%8s', null, '456'],         'null       456'    ],
+            [ ['%-6s%8s', undefined],          'undefined%8s'       ],
+        ],
+        function(args) { return logger.apply(null, args) }
     )
 })
