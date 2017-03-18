@@ -1,6 +1,6 @@
 {
   "name": "qb-format-s",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A tiny implementation of printf spacing logic for strings",
   "repository": "quicbit-js/qb-format-s",
   "devDependencies": {
