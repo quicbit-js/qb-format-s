@@ -2,19 +2,31 @@
 
 [![npm][npm-image]][npm-url]
 [![downloads][downloads-image]][npm-url]
+[![bitHound Dependencies][proddep-image]][proddep-link]
+[![dev dependencies][devdep-image]][devdep-link]
+[![code analysis][code-image]][code-link]
 
 [npm-image]:       https://img.shields.io/npm/v/qb-format-s.svg
 [downloads-image]: https://img.shields.io/npm/dm/qb-format-s.svg
 [npm-url]:         https://npmjs.org/package/qb-format-s
+[proddep-image]:   https://www.bithound.io/github/quicbit-js/qb-format-s/badges/dependencies.svg
+[proddep-link]:    https://www.bithound.io/github/quicbit-js/qb-format-s/master/dependencies/npm
+[devdep-image]:    https://www.bithound.io/github/quicbit-js/qb-format-s/badges/devDependencies.svg
+[devdep-link]:     https://www.bithound.io/github/quicbit-js/qb-format-s/master/dependencies/npm
+[code-image]:      https://www.bithound.io/github/quicbit-js/qb-format-s/badges/code.svg
+[code-link]:       https://www.bithound.io/github/quicbit-js/qb-format-s
 
 A tiny implementation of printf's spacing logic for strings (~500 added bytes to minified codebase).  Only supports
 %s, not numbers, floats, etc.
 
-## install
+**Complies with the 100% test coverage and minimum dependency requirements** of 
+[qb-standard](http://github.com/quicbit-js/qb-standard) . 
+
+## Install
 
     npm install qb-format-s
     
-## examples
+## Examples
 
 qb-format-s has very similar behavior to the standard printf library function for string formatting *.
 
